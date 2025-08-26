@@ -53,7 +53,7 @@ The app displays live prices for Gold, Silver, Platinum, and Palladium, which ar
 
 1.  **Clone the repository:**
     ```bash
-    git clone [hhttps://github.com/Kathan99/Live-Metal-Pricing-Application.git](https://github.com/Kathan99/Live-Metal-Pricing-Application.git)
+    git clone [https://github.com/Kathan99/Live-Metal-Pricing-Application.git](https://github.com/Kathan99/Live-Metal-Pricing-Application.git)
     ```
 
 2.  **Navigate to the project directory:**
