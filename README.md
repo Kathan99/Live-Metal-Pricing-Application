@@ -1,50 +1,76 @@
-# Welcome to your Expo app 👋
+# Live Metal Prices Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The app displays live prices for Gold, Silver, Platinum, and Palladium, which are updated dynamically every 30 seconds. It features a home screen with summary tiles and a details screen with more in-depth information for each metal.
 
-## Get started
+---
 
-1. Install dependencies
+## 📸 Screenshots
 
-   ```bash
-   npm install
-   ```
+### Home Screen
+*Displays a list of metals with their current prices and a synchronized countdown timer for the next update.*
 
-2. Start the app
+![Home Screen Screenshot](./screenshots/HomePage.png) 
 
-   ```bash
-   npx expo start
-   ```
+### Details Screen
+*Shows detailed information for a selected metal, including price change indicators and a synchronized 30-second update timer.*
 
-In the output, you'll find options to open the app in a
+![Details Screen Screenshot](./screenshots/DetailsPage.png)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ✨ Features
 
-## Get a fresh project
+- **Live Price Tracking**: Fetches and displays prices for Gold, Silver, Platinum, and Palladium.
+- **Dynamic Updates**: Prices on both the home and details screens update automatically every 30 seconds.
+- **Synchronized Timers**: A global countdown timer is synchronized across all components, showing users exactly when the next price update will occur.
+- **Individual Loaders**: Each tile on the home screen handles its own initial loading state independently.
+- **Detailed View**: A dedicated screen shows comprehensive details, including:
+    - Previous Close, Open, Day High, and Day Low.
+    - Dynamically calculated price change and percentage.
+    - Visual indicators (▲/▼) for positive or negative price changes.
+- **Error Handling**: Gracefully handles API errors on a per-component basis.
+---
 
-When you're ready, run:
+## 🛠️ Tech Stack
 
-```bash
-npm run reset-project
-```
+- **Framework**: React Native with Expo
+- **Navigation**: Expo Router
+- **State Management**: React Hooks (useState, useEffect, useContext)
+- **API**: Mock API service with simulated live data updates.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🚀 Getting Started
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Prerequisites
 
-## Join the community
+- Node.js (v18 or newer)
+- npm or yarn
+- Expo Go app on your mobile device (for testing)
 
-Join our community of developers creating universal apps.
+### Installation & Execution
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1.  **Clone the repository:**
+    ```bash
+    git clone [hhttps://github.com/Kathan99/Live-Metal-Pricing-Application.git](https://github.com/Kathan99/Live-Metal-Pricing-Application.git)
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd samplify-money-assignment
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Run the application:**
+    ```bash
+    npx expo start
+    ```
+
+5.  **Open the app:**
+    - Scan the QR code with the Expo Go app on your iOS or Android phone.
+    - Or, press `a` to run on an Android Emulator or `i` to run on an iOS Simulator.

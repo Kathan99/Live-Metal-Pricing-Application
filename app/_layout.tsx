@@ -1,29 +1,24 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { TimerProvider } from '/Users/kathan99/Documents/Simplify Money/simplify-money-assignment/contexts/TimerContext' // Import the provider
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+    // Wrap the Stack with the TimerProvider
+    <TimerProvider>
+      <Stack
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#1E1E1E',
+          },
+          headerTintColor: '#FFFFFF',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="details" options={{ presentation: 'modal' }} />
       </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    </TimerProvider>
   );
 }
