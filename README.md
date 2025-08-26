@@ -58,7 +58,7 @@ The app displays live prices for Gold, Silver, Platinum, and Palladium, which ar
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd samplify-money-assignment
+    cd simplify-money-assignment
     ```
 
 3.  **Install dependencies:**
